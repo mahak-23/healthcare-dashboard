@@ -1,11 +1,15 @@
 import React from "react";
+
+// icons
 import { Bell, ChevronDown, Search } from "lucide-react";
 
+// child components
 import HealthStatusCards from "./HealthStatusCards";
 import ActivityFeed from "./ActivityFeed";
-
-import "../../styles/LeftPanel.css";
 import AnatomySection from "./AnatomySection ";
+
+// style
+import "../../styles/LeftPanel.css";
 
 const LeftPanel = () => {
   return (

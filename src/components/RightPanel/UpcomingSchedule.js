@@ -1,5 +1,9 @@
 import React from "react";
+
+// data
 import appointments from "../../data/appointments";
+
+// child component
 import SimpleAppointmentCard from "../SimpleAppointmentCard ";
 
 const UpcomingSchedule = () => {

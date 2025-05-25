@@ -1,4 +1,6 @@
 import React from "react";
+
+// style
 import "../styles/SimpleAppointmentCard.css"
 
 const SimpleAppointmentCard = ({ title, time, doctor, icon, dark }) => {

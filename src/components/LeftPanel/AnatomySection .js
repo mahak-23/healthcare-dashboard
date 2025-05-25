@@ -1,4 +1,6 @@
 import React from "react";
+
+// image
 import anatomyImg from "../../assets/images/anatomy-placeholder.png";
 
 const AnatomySection = () => {

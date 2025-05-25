@@ -1,4 +1,6 @@
 import React from "react";
+
+// data
 import healthStatus from "../../data/healthStatus";
 
 const HealthStatusCards = () => {

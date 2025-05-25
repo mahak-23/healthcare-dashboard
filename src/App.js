@@ -1,6 +1,10 @@
 import React, { useState, useEffect } from "react";
+
+// child components
 import Sidebar from "./components/Sidebar";
 import DashboardMainContent from "./components/DashboardMainContent";
+
+// style
 import "./App.css";
 
 const App = () => {
@@ -13,7 +17,7 @@ const App = () => {
       if (window.innerWidth >= 768) setIsSidebarOpen(true);
     };
     window.addEventListener("resize", handleResize);
-    handleResize(); // initialize
+    handleResize();
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 

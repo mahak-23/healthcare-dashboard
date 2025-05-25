@@ -1,5 +1,9 @@
 import React from "react";
+
+// style
 import "../styles/Sidebar.css";
+
+// icons
 import {
   Clock,
   BarChart2,

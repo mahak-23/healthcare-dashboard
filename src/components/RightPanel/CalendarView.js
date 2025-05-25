@@ -1,9 +1,15 @@
 import React from "react";
+
+// icons
 import { ArrowBigLeft, ArrowBigRight } from "lucide-react";
+
+// data
 import calendarData from "../../data/calendarData";
+
+// child components
 import SimpleAppointmentCard from "../SimpleAppointmentCard ";
 
-const CalendarView  = () => {
+const CalendarView = () => {
   return (
     <div className="calendar-container">
       <div className="calendar-header">
@@ -30,9 +36,7 @@ const CalendarView  = () => {
                   <span
                     key={index}
                     className={`time-slot ${
-                      slot === item.slotSelected
-                        ? "selected-time"
-                        : ""
+                      slot === item.slotSelected ? "selected-time" : ""
                     }`}
                   >
                     {slot}
@@ -67,4 +71,4 @@ const CalendarView  = () => {
   );
 };
 
-export default CalendarView ;
+export default CalendarView;

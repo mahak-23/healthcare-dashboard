@@ -1,7 +1,13 @@
 import React from "react";
+
+// style
 import "../styles/DashboardMainContent.css";
+
+// child components
 import LeftPanel from "./LeftPanel";
 import RightPanel from "./RightPanel";
+
+// icons
 import { CircleChevronRight } from "lucide-react";
 
 const DashboardMainContent = ({ openSidebar, isMobile }) => {
