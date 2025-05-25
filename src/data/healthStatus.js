@@ -2,7 +2,7 @@ import lungsImg from "../assets/images/lungs-anatomy.png";
 import teethImg from "../assets/images/teeth.png";
 import boneImg from "../assets/images/bone.png";
 
-export default [
+const healthStatus = [
   {
     title: "Lungs",
     date: "26 Oct 2021",
@@ -25,3 +25,5 @@ export default [
     img: boneImg,
   },
 ];
+
+export default healthStatus;

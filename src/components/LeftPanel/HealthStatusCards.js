@@ -25,7 +25,9 @@ const HealthStatusCards = () => {
         </div>
       ))}
       <div className="details-link">
-        <a href="#">Details →</a>
+        <a href="/" onClick={(e) => e.preventDefault()}>
+          Details →
+        </a>
       </div>
     </div>
   );

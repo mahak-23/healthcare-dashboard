@@ -32,7 +32,7 @@
     flex: 1;
     border: none;
     outline: none;
-    font-size: 0.9rem;
+    font-size: clamp(13px, 1.3vw, 15px);
     padding: 0.5rem 0;
     background: transparent;
     color: #2d3748;
@@ -56,13 +56,13 @@
 }
 
 .header-row h2 {
-    font-size: 24px;
+    font-size: clamp(18px, 2vw, 24px);
 }
 
 .header-week {
     color: #6366f1;
     font-weight: 500;
-    font-size: 12px;
+    font-size: clamp(10px, 1vw, 12px);
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -73,6 +73,7 @@
 .anatomy-section {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     gap: 30px;
     width: 100%;
 }
@@ -81,7 +82,9 @@
     position: relative;
     display: flex;
     justify-content: center;
-    width: 20rem;
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto;
 }
 
 .anatomy-img {
@@ -99,9 +102,14 @@
     display: flex;
     align-items: center;
     gap: 5px;
-    font-size: 12px;
+    font-size: clamp(10px, 1vw, 12px);
     font-weight: 500;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    font-size: clamp(10px, 1.2vw, 12px);
+    padding: 6px 12px;
+    white-space: nowrap;
+    transform: translate(-50%, -50%);
 }
 
 .indicator img {
@@ -111,14 +119,14 @@
 }
 
 .indicator.heart {
-    top: 20%;
-    left: 60%;
+    top: 25%;
+    left: 75%;
     background-color: #5b21b6;
 }
 
 .indicator.leg {
-    top: 45%;
-    left: 10%;
+    top: 60%;
+    left: 30%;
     background-color: #06b6d4;
 }
 
@@ -146,7 +154,7 @@
 }
 
 .status-date {
-    font-size: 13px;
+    font-size: clamp(11px, 1.2vw, 13px);
     color: #9ca3af;
     margin: 6px 0 10px;
 }
@@ -186,7 +194,7 @@
 
 .details-link a {
     color: #6366f1;
-    font-size: 14px;
+    font-size: clamp(12px, 1.2vw, 14px);
     text-decoration: none;
     font-weight: 500;
 }
@@ -200,7 +208,7 @@
 }
 
 .activity-header h4 {
-    font-size: 16px;
+    font-size: clamp(14px, 1.2vw, 16px);
 }
 
 .activity-header span {
@@ -230,7 +238,7 @@
 }
 
 .bar {
-    width: 4px;
+    width: clamp(3px, 1vw, 6px);
     border-radius: 4px;
 }
 
@@ -250,6 +258,6 @@
 }
 
 .day-label {
-    font-size: 12px;
+    font-size: clamp(11px, 1.2vw, 13px);
     color: #6b7280;
 }

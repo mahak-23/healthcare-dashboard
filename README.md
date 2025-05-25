@@ -1,70 +1,91 @@
-# Getting Started with Create React App
+# 🏥 Healthcare Dashboard
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A fully responsive, pixel-perfect **Healthcare Dashboard** built with **React**. This project demonstrates clean component architecture, modular styling, and mock data-driven rendering.
 
-## Available Scripts
+## 📸 Preview
 
-In the project directory, you can run:
+![Dashboard Screenshot](./screenshot/healthcare-dashboard.png)
 
-### `npm start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 🚀 Live Demo
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Hosted on: [https://healthcare-dashboard-ui.netlify.app](https://healthcare-dashboard-ui.netlify.app)
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 📁 Features
 
-### `npm run build`
+- Responsive design across desktop, tablet, and mobile
+- Static data rendered using React props
+- Clean and professional healthcare-themed UI
+- Modular, reusable component structure
+- Pixel-perfect implementation from Figma/image design
+- No interactivity or state management (static UI only)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 📦 Tech Stack
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- ⚛  **React** (with Create React App)
+- 🎨 **CSS** (Modular or Global CSS)
+- 🧩 **Lucide React** (for icons)
+- 📁 **Static JS Objects** for mock data
+- 📱 **Responsive Layouts** using Flexbox & CSS Grid
+- 🌍 **Deployed on**: [Netlify](https://app.netlify.com/)
 
-### `npm run eject`
+---
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## 📁 Folder Structure
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```bash
+src/
+├── assets/ # Icons, anatomy image, avatars
+├── components/ # React component files
+│ ├── Sidebar
+│ ├── LeftPanel/
+│ ├── RightPanel/
+│ └── DashboardMainContent
+├── data/ # Static mock data (calendarData, appointments, healthStatus)
+├── styles/ # Component-specific CSS
+├── App.css # Global CSS
+├── App.js
+├── index.css
+├── index.js
+└── README.md
+```
+---
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## 🧩 Component Breakdown
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+| Component                | Responsibility                                             |
+|--------------------------|------------------------------------------------------------|
+| `App.js`                 | Layout controller (Sidebar + MainContent)                 |
+| `Sidebar`                | Fixed nav with grouped links                              |
+| `DashboardMainContent`   | Houses `LeftPanel` and `RightPanel`                      |
+| `LeftPanel`              | Contains search bar, anatomy section, status, activity   |
+| `RightPanel`             | Contains calendar and upcoming schedule                  |
+| `AnatomySection`         | Image + health indicators                                 |
+| `HealthStatusCards`      | Mock progress cards (lungs, bone, teeth)                 |
+| `CalendarView`           | Time slots per weekday (responsive grid/flex)            |
+| `SimpleAppointmentCard`  | Reusable schedule block                                  |
+| `ActivityFeed`           | Static bar chart visualization                           |
 
-## Learn More
+---
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## 🛠️ How to Run Locally
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```bash
+# 1. Clone the repo
+git clone https://github.com/mahak-23/healthcare-dashboard.git
+cd healthcare-dashboard
 
-### Code Splitting
+# 2. Install dependencies
+npm install
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+# 3. Run development server
+npm run dev    # or `npm start` if using CRA
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+# 4. Open in browser
+http://localhost:3000
+```

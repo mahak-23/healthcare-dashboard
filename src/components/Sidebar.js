@@ -9,28 +9,37 @@ import {
   CalendarPlus,
   Phone,
   MessageCircleMore,
+  X,
 } from "lucide-react";
 
 const links = [
-  { icon: <LayoutDashboard fill="#262682" size={20} />, label: "Dashboard" },
-  { icon: <Clock fill="#ccc" size={20} />, label: "History" },
-  { icon: <CalendarDays fill="#ccc" size={20} />, label: "Calendar" },
-  { icon: <CalendarPlus fill="#ccc" size={20} />, label: "Appointments" },
-  { icon: <BarChart2 size={20} fill="#ccc" />, label: "Statistics" },
+  { icon: <LayoutDashboard fill="#262682" />, label: "Dashboard" },
+  { icon: <Clock fill="#ccc" />, label: "History" },
+  { icon: <CalendarDays fill="#ccc" />, label: "Calendar" },
+  { icon: <CalendarPlus fill="#ccc" />, label: "Appointments" },
+  { icon: <BarChart2 fill="#ccc" />, label: "Statistics" },
 ];
 
 const tools = [
-  { icon: <MessageCircleMore size={20} fill="#ccc" />, label: "Chat" },
-  { icon: <Phone size={20} fill="#ccc" />, label: "Support" },
+  { icon: <MessageCircleMore fill="#ccc" />, label: "Chat" },
+  { icon: <Phone fill="#ccc" />, label: "Support" },
 ];
 
-const setting = [
-  { icon: <Settings size={20} fill="#ccc" />, label: "Setting" },
-];
+const setting = [{ icon: <Settings fill="#ccc" />, label: "Setting" }];
 
-const Sidebar = () => {
+const Sidebar = ({ isOpen, isMobile, toggleSidebar }) => {
   return (
-    <aside className="sidebar">
+    <aside
+      className={`sidebar ${isOpen ? "sidebar-open" : ""} ${
+        isMobile ? "sidebar-mobile" : ""
+      }`}
+    >
+      {isMobile && (
+        <button className="sidebar-close-btn" onClick={toggleSidebar}>
+          <X />
+        </button>
+      )}
+
       <div className="logo">
         Health<span>care.</span>
       </div>
@@ -55,10 +64,10 @@ const Sidebar = () => {
       <div className="sidebar-section">
         <h3 className="sidebar-title">Tools</h3>
         <ul className="sidebar-links">
-          {tools.map((tool, idx) => (
+          {tools.map((link, idx) => (
             <li key={idx} className="sidebar-link">
-              {tool.icon}
-              <span>{tool.label}</span>
+              {link.icon}
+              <span>{link.label}</span>
             </li>
           ))}
         </ul>

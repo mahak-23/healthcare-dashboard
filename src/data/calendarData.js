@@ -1,4 +1,4 @@
-export default {
+const calendarData = {
   month: "October 2021",
   events: [
     { day: "Mon", date: 25, slots: ["10:00", "11:00", "12:00"] },
@@ -32,3 +32,5 @@ export default {
     },
   ],
 };
+
+export default calendarData;

@@ -7,25 +7,25 @@
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    gap: 12px;
+    gap: clamp(8px, 1vw, 12px);
 }
 
 .profile-img {
-    width: 40px;
-    height: 40px;
+    width: clamp(32px, 5vw, 40px);
+    height: clamp(32px, 5vw, 40px);
     border-radius: 50%;
     object-fit: cover;
     background-color: #d0f6f9;
 }
 
 .add-btn {
-    width: 38px;
-    height: 38px;
+    width: clamp(30px, 5vw, 38px);
+    height: clamp(30px, 5vw, 38px);
     border-radius: 12px;
     border: none;
     background: #2f2fa2;
     color: white;
-    font-size: 24px;
+    font-size: clamp(18px, 2vw, 24px);
     font-weight: bold;
     cursor: pointer;
     transition: 0.2s;
@@ -53,7 +53,8 @@
 
 .calendar-days {
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
     margin-top: 20px;
 }
 
@@ -70,7 +71,7 @@
 }
 
 .day-date {
-    font-size: 16px;
+    font-size: clamp(14px, 1.2vw, 16px);
     margin-bottom: 10px;
 }
 
@@ -82,7 +83,7 @@
 
 .time-slot {
     padding: 4px 0;
-    font-size: 12px;
+    font-size: clamp(10px, 1vw, 12px);
     color: #333;
 }
 
@@ -115,7 +116,8 @@
     color: #ccc;
 }
 
-.calendar-schedule-cards {
+.calendar-schedule-cards,
+.schedule-items {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
@@ -124,7 +126,6 @@
 
 .upcoming-schedule {
     margin-top: 20px;
-    padding: 0 16px;
     display: flex;
     flex-direction: column;
     align-items: start;
@@ -138,7 +139,8 @@
     font-family: 14px;
 }
 
-.schedule-items {
-    display: flex;
-    gap: 10px;
+@media (max-width: 768px) {
+    .calendar-days {
+        gap: 5px;
+    }
 }

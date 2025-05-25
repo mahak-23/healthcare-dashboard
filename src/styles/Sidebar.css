@@ -1,13 +1,5 @@
-.sidebar {
-    width: 180px;
-    background-color: #f9fbff;
-    padding: 2rem 1rem;
-    display: flex;
-    flex-direction: column;
-}
-
 .logo {
-    font-size: 24px;
+    font-size: clamp(18px, 2vw, 24px);
     font-weight: bold;
     color: #00d5df;
     padding-left: 0.5rem;
@@ -26,7 +18,7 @@
 }
 
 .sidebar-title {
-    font-size: 0.85rem;
+    font-size: clamp(12px, 1vw, 14px);
     font-weight: 600;
     color: #ccc;
     margin-bottom: 0.5rem;
@@ -46,7 +38,7 @@
     border-radius: 10px;
     color: #aaa;
     font-weight: 500;
-    font-size: 0.95rem;
+    font-size: clamp(13px, 1.1vw, 16px);
     transition: background 0.3s ease, color 0.3s ease;
     cursor: pointer;
 }
@@ -56,11 +48,63 @@
     color: #3174f3;
 }
 
-.sidebar-link svg {
+.sidebar-link svg,
+.sidebar-close-btn svg {
     margin-right: 0.8rem;
     stroke-width: 1.7;
+    width: clamp(16px, 2vw, 20px);
+    height: clamp(16px, 2vw, 20px);
+}
+
+.sidebar-close-btn svg {
+    margin: 0px;
 }
 
 .Dashboard {
     color: #262682;
+}
+
+.sidebar {
+    background-color: #f9fbff;
+    padding: 2rem 1rem;
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - 64px);
+    width: 180px;
+    top: 0;
+    left: 0;
+    transition: transform 0.3s ease-in-out;
+    box-shadow: 4px 0 12px rgba(0, 0, 0, 0.08);
+    z-index: 100;
+}
+
+/* Mobile overlay behavior */
+.sidebar.sidebar-mobile {
+    transform: translateX(-100%);
+    position: absolute;
+    width: 150px;
+}
+
+.sidebar.sidebar-mobile.sidebar-open {
+    transform: translateX(0);
+}
+
+.sidebar-close-btn {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 101;
+}
+
+@media (min-width: 768px) {
+    .sidebar {
+        transform: translateX(0) !important;
+    }
+
+    .sidebar-close-btn {
+        display: none;
+    }
 }

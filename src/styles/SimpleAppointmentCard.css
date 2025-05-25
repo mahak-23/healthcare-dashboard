@@ -17,15 +17,15 @@
     align-items: center;
     margin-bottom: 4px;
     gap: 20px;
-    font-size: 14px;
+    font-size: clamp(12px, 1.2vw, 14px);
     font-weight: 600;
 }
 
 .schedule-time {
-    font-size: 12px;
+    font-size: clamp(10px, 1vw, 12px);
 }
 
 .schedule-doctor {
-    font-size: 12px;
+    font-size: clamp(10px, 1vw, 12px);
     color: inherit;
 }
