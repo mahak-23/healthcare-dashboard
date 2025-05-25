@@ -1,0 +1,38 @@
+.dashboard-main {
+    display: flex;
+    width: calc(100% - 180px);
+    max-height: 100vh;
+    overflow-y: auto;
+}
+
+.left-panel {
+    padding: 1rem;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: #fff;
+    color: #262682;
+}
+
+.right-panel {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 1rem;
+    background: #f9fbff;
+    color: #262682;
+}
+
+
+.section-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+h2,
+h4 {
+    margin: 2px;
+}
